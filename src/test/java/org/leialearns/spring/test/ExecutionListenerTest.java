@@ -1,6 +1,5 @@
 package org.leialearns.spring.test;
 
-import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,6 +10,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
 
 import java.io.IOException;
+
+import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"/org/leialearns/spring/test/AppTest-context.xml"})
@@ -27,6 +28,6 @@ public class ExecutionListenerTest {
 
     @Test
     public void testExecutionListener() {
-        Assert.assertNotNull(test);
+        assertNotNull(test);
     }
 }
